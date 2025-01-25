@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: "Times New Roman",serif;
+    line-height: 1.6;
+    color: black;
+    margin: 10px 260px; 
+    padding: 5;
+    position: relative;
+}
+
+/* Background Image */
+body::after {
+    content: ''; /* Necessary to display the pseudo-element */
+    position: absolute;
+    top: calc(50px + 50px); /* Adjust to start right below the h1 (header height + margin) */
+    left: 0;
+    width: 100%; /* Full width of the body */
+    height: 60%; /* Take up 60% of the body height */
+    background: url('WidgetCoLogo.gif') no-repeat center center;
+    background-size: contain; /* Ensure the image fits within the 60% height */
+    z-index: -1; /* Push it behind the content */
+}
+
+/* Header */
+header {
+    text-align: center;
+    font-size: 0.9em;
+    font-variant: small-caps;
+    margin-top: 11px;
+    padding: px 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    position: relative;
+}
+
+/* Black vertical bar on the header */
+header::after {
+    content: '';
+    position: absolute;
+    right: 0; /* Align to the right */
+    top: 0;
+    width: 13px;
+    height: 100%; /* Align with the top and bottom borders */
+    background-color: black;
+}
+
+/* Aside */
+aside {
+    position: absolute;
+    top: 24px;
+    right: 8px;
+    background-color: transparent;
+    padding: 15px;
+    font-size: 0.9em;
+    width: 200px;
+    line-height: 1.4;
+    text-align: right;
+}
+
+/* Navy blue vertical bar for the aside */
+aside::after {
+    content: '';
+    position: absolute;
+    right: -8px; /* Position it directly below the black bar */
+    top: 0;
+    width: 13px;
+    height: 90%; 
+    background-color: navy;
+}
+
+/* Main Title */
+h1 {
+    text-align: left;
+    font-size: 2.6em;
+    margin-top: 10px;
+    padding:-100px;
+    text-transform: capitalize;
+}
+
+/* Subtitle */
+h2 {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.7em;
+    margin: 100px;
+    margin-bottom:0;
+    padding:-40px;
+}
+
+/* Article Text */
+article p {
+    margin: 20px 40px;
+    text-align: justify;
+}
+
+/* Section (Boxed Content) */
+article section {
+    margin: 10px 60px;
+    background-color: #eaeaea;
+    border: 3px solid green;
+    padding: 12px;
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    text-align: right;
+    font-size: 0.7em;
+    margin: 20px 0;
+    padding-top: 10px;
+    border-top: 1px solid grey;
+    position: relative;
+}
+
+/* Green box on the footer */
+article section::before {
+    content: '';
+    margin: -15px 100px;
+    position: absolute;
+    left:-55px; /* Add the green box to the left */
+    top:-10;
+    width: 24px;
+    height: 11.5%; /* Matches the height of the border */
+    background-color: green;
+}
+
+/* Footer Links */
+footer a:link, footer a:visited {
+    color: grey;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Specific Aside First-Line Style */
+aside::first-line {
+    font-weight: bold;
+    text-transform: uppercase;
+}
