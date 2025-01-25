@@ -65,7 +65,7 @@ aside::after {
     top: 0;
     width: 13px;
     height: 90%; 
-    background-color: navy;
+    background-color: darkorange;
 }
 
 /* Main Title */
@@ -97,7 +97,7 @@ article p {
 article section {
     margin: 10px 60px;
     background-color: #eaeaea;
-    border: 3px solid green;
+    border: 3px solid teal;
     padding: 12px;
     text-align: justify;
     font-size: 0.9em;
@@ -112,6 +112,16 @@ footer {
     border-top: 1px solid grey;
     position: relative;
 }
+/* Footer text (solid grey color) */
+footer {
+    text-align: right;
+    font-size: 0.7em;
+    margin: 20px 0;
+    padding-top: 10px;
+    border-top: 1px solid grey;
+    position: relative;
+    color: grey; /* Set all footer text to solid grey */
+}
 
 /* Green box on the footer */
 article section::before {
@@ -122,7 +132,7 @@ article section::before {
     top:-10;
     width: 24px;
     height: 11.5%; /* Matches the height of the border */
-    background-color: green;
+    background-color: teal;
 }
 
 /* Footer Links */
